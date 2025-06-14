@@ -1,16 +1,19 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Modal from 'react-modal'
 import './App.css'
+import axios from 'axios'
 
 function App() {
   const [isModal1Open, setIsModal1Open] = useState(false)
   const [isModal2Open, setIsModal2Open] = useState(false)
 
   const [iptName, setIptName] = useState()
-  const [iptDate, setIptDate] = useState()
-
+  const [iptDate, setIptDate] = useState('')
   const [inicialOption, setInicialOption] = useState()
-  
+
+  const [lista, setLista] = useState([])
+
+  const dataHorario = `${iptDate}T${inicialOption}:00`
 
   function FormattedToday() {
     const today = new Date()
@@ -25,31 +28,55 @@ function App() {
       setIsModal1Open(abrir_fechar)
     } 
     else {
-      if(FormValidation(iptName, iptDate)) {
-        setIsModal2Open(abrir_fechar)
-        setIsModal1Open(false)
-      }
-      else {
-        alert("Preencha corretamente os campos antes de confirmar!")
+      if (abrir_fechar) {
+        if(FormValidation(iptName, iptDate)) {
+          axios.post('https://barbearia-backend-production-ab40.up.railway.app/agendamentos', {
+            cliente: iptName,
+            dataHorario: dataHorario
+          })
+          .then(() => {
+            axios.get('https://barbearia-backend-production-ab40.up.railway.app/agendamentos')
+              .then(response => setLista(response.data))
+          })
+          setIsModal2Open(true)
+          setIsModal1Open(false)
+          setIptDate('')
+          setInicialOption('')
+        } else {
+          alert("Preencha corretamente os campos antes de confirmar!")
+        }
+      } else {
+        setIsModal2Open(false) 
       }
     } 
   }
 
- function FormValidation(iptName, iptDate) {
+  function FormValidation(iptName, iptDate) {
     return /^[A-Za-z\s]+$/.test(iptName) && /[^ ]/.test(iptName) && (iptDate) && (inicialOption)
-}
+  }
 
-function DisableOption(optionTime, selectedDate) {
+  useEffect(() => {
+    axios.get('https://barbearia-backend-production-ab40.up.railway.app/agendamentos')
+      .then(response => {
+        setLista(response.data)
+      })
+  }, [])
 
-  const now = new Date()
-  const selected = new Date(`${selectedDate}T${optionTime}`)
+  function DisableOption(optionTime, selectedDate) {
+    const now = new Date()
+    const selected = new Date(`${selectedDate}T${optionTime}`)
 
-  return selected < now
-}
+    const isScheduled = lista.some(item => 
+      item.data === selectedDate && item.horario.slice(0,5) === optionTime
+    );
+
+    return selected < now || isScheduled
+  }
 
   return (
     <main>
       <section>
+<<<<<<< HEAD
       <header>
         <nav>
           <ul>
@@ -65,6 +92,16 @@ function DisableOption(optionTime, selectedDate) {
           </ul>
         </nav>
       </header>
+=======
+        <header>
+          <nav>
+            <ul>
+              <li><a href="#sobre">Sobre</a></li>
+              <li><a href="#servicos">Serviços</a></li>
+            </ul>
+          </nav>
+        </header>
+>>>>>>> 7d7b93514a9c1e1cf6982d73b3ad4279d4152063
 
         <div id="inicial"> {/* ID para estilizar os parágrafos na página inicial */}
           <h1>SEU CORTE FALA POR VOCÊ ANTES MESMO DE VOCÊ DIZER UMA PALAVRA</h1>
@@ -74,6 +111,7 @@ function DisableOption(optionTime, selectedDate) {
         <input type="button" value="Agendar serviço" onClick={() => HandleModal(1, true)} />
 
 
+<<<<<<< HEAD
         
           <Modal isOpen={isModal1Open} contentLabel="Agendar Serviço">
             <h2>Agendar Serviço</h2>
@@ -111,6 +149,12 @@ function DisableOption(optionTime, selectedDate) {
             <button type="button" onClick={() => HandleModal(2, false)}>Voltar</button>
           </Modal>
     
+=======
+        <Modal isOpen={isModal2Open} contentLabel="Agendamento realizado!">
+          <h2>Agendamento realizado</h2>
+          <button type="button" onClick={() => HandleModal(2, false)}>Voltar</button>
+        </Modal>
+>>>>>>> 7d7b93514a9c1e1cf6982d73b3ad4279d4152063
       </section>
 
       <section id="sobre">
@@ -132,3 +176,9 @@ function DisableOption(optionTime, selectedDate) {
 
 export default App
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 7d7b93514a9c1e1cf6982d73b3ad4279d4152063
