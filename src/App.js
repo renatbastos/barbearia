@@ -76,7 +76,7 @@ function App() {
   return (
     <main>
       <section>
-<<<<<<< HEAD
+
       <header>
         <nav>
           <ul>
@@ -92,7 +92,7 @@ function App() {
           </ul>
         </nav>
       </header>
-=======
+
         <header>
           <nav>
             <ul>
@@ -101,7 +101,6 @@ function App() {
             </ul>
           </nav>
         </header>
->>>>>>> 7d7b93514a9c1e1cf6982d73b3ad4279d4152063
 
         <div id="inicial"> {/* ID para estilizar os parágrafos na página inicial */}
           <h1>SEU CORTE FALA POR VOCÊ ANTES MESMO DE VOCÊ DIZER UMA PALAVRA</h1>
@@ -109,9 +108,6 @@ function App() {
         </div>
 
         <input type="button" value="Agendar serviço" onClick={() => HandleModal(1, true)} />
-
-
-<<<<<<< HEAD
         
           <Modal isOpen={isModal1Open} contentLabel="Agendar Serviço">
             <h2>Agendar Serviço</h2>
@@ -149,12 +145,12 @@ function App() {
             <button type="button" onClick={() => HandleModal(2, false)}>Voltar</button>
           </Modal>
     
-=======
+
         <Modal isOpen={isModal2Open} contentLabel="Agendamento realizado!">
           <h2>Agendamento realizado</h2>
           <button type="button" onClick={() => HandleModal(2, false)}>Voltar</button>
         </Modal>
->>>>>>> 7d7b93514a9c1e1cf6982d73b3ad4279d4152063
+
       </section>
 
       <section id="sobre">
@@ -176,9 +172,3 @@ function App() {
 
 export default App
 
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> 7d7b93514a9c1e1cf6982d73b3ad4279d4152063
