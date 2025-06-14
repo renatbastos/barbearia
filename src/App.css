@@ -1,4 +1,256 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
 section {
     height: 700px;
     width: 1000px;
 }
+
+.caixa1{
+    display: flex;
+    gap: 20px; /* espaço entre as imagens */ 
+    justify-content: center;
+    align-items: left;
+    margin: 20px auto;
+    width: 100;
+    flex-direction: column;
+    display: flex;
+    margin-left: 45px;
+    margin-top: -50px;
+    position: relative;
+    top: -100px;
+}
+
+.texto{
+    /* text-align: center; */
+    font-weight: bold;
+    margin-left: 250px;
+    position: relative;
+    top: -408px;
+    /* border: 2px solid black; */
+    /* border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); */
+    width: 20%;
+    margin-top: 15px; 
+    font-size: 18px;
+    white-space: nowrap;
+    
+}
+
+.imagem-container {
+    display: flex;
+    gap: 10px; /* Espaço entre as imagens */
+}
+
+.imagem {
+    text-align: center; 
+}
+
+.imagem img{
+    width: 45%;
+    height: auto;
+    position: relative;
+    top: -400px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    height: auto;
+    text-align: center;
+    
+}             
+
+.barba img{
+    display: flex;
+    position: relative;
+    width:25%;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    height: auto;
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    gap: 20px;
+    background-color: #000000;
+    color: #ffffff;
+}
+.sobre,.servicos{
+    border: 2px solid black;
+    width: 1512px;
+    height: 50px;
+    box-sizing: border-box;
+    /* flex: 1; cada section ocupa metade do espaço */
+}
+
+.sobre a, .servicos a{
+    color: #ffffff;
+    text-decoration: none;
+    
+}
+
+.sobre li, .servicos li{
+    list-style-type: none;
+}
+
+/* .agendamento{
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin: auto;
+    width: 50%;
+}
+
+.agendamento h2{
+    margin-bottom: 10px;
+}
+
+.agendamento form div{
+    margin-bottom: 10px;
+}
+
+.agendamento input, .agendamento select{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.agendamento button{
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+} */
+
+#inicial{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+}
+
+input{
+    display: block;
+    margin: 100px auto;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 200px;
+    font-size: 15px;
+    background-color: #1d1c1c;
+    color: #ffffff;
+    font-weight: bold;
+    z-index: 1;
+}
+
+
+div.card {
+  width: 30%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 4px 8px 0 rgb(29, 28, 28), 0 6px 20px 0 rgba(0, 0, 0, 0.425);
+  margin-bottom: 25px;
+  /* position:relative; */
+  top: 100px;
+  font-size: 18px;
+  
+}
+
+div.caixa {
+  text-align: center;
+  padding: 5px 5px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+
+.barbearia{
+    position: absolute;
+    background-image: url('/public/img/barbearia-1200.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 820px;
+    top: 0;
+    left: 0;
+    opacity: 0.7;
+    z-index: -1;
+}
+
+#sobre{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    flex-direction: column;
+    right: 0;
+    width: 50%;
+    top: 650px;
+    text-align: justify;
+    font-size: 22px;
+    margin-right: 10px;
+   
+}
+
+#borda{
+    padding: 50px;
+    text-align: center;
+    justify-content: center;
+    margin-right: 80px;
+    margin-top: 170px;
+    width: 100%;
+    background-color: #ffffff;
+}
+#servicos{
+    text-align: center;
+    width: 100%;
+    margin-top: 650px;
+    font-size: 20px;
+}
+
+.container1{
+    display: flex;
+    justify-content: center;
+    gap: 80px; /* espaçamento entre as imagens */
+    transform: translateY(100px);
+}
+
+.card{
+    transform: translateY(-650px);
+}
+
+.imgsobre{
+    padding: 15px;
+    padding-bottom: 0px;
+    position: absolute;
+    top: 820px;
+    width: 40%;
+    
+}
+.img1 img{
+    width: 28%;
+    height: auto;
+    transform: translate(70%, 10%); /*MOVE A IMAGEM PARA CIMA E PARA A DIREITA*/
+    border-radius: 5px;
+}
+
+.img2 img{
+    width: 28%;
+    height: auto;
+    border-radius: 5px;
+    transform: translate(150%, -8%); 
+    
+}
+
+.img3 img{
+    border-radius: 5px;
+    width: 50%;
+    transform: translate(98%, -220%); 
+    height: auto;
+}
+
