@@ -88,14 +88,22 @@ function App() {
         </nav>
       </header>
 
+<<<<<<< HEAD
         {/* <header>
+=======
+        <header>
+>>>>>>> e000423c2180a436afd4efbabce4e22e100df252
           <nav>
             <ul>
               <li><a href="#sobre">Sobre</a></li>
               <li><a href="#servicos">Serviços</a></li>
             </ul>
           </nav>
+<<<<<<< HEAD
         </header> */}
+=======
+        </header>
+>>>>>>> e000423c2180a436afd4efbabce4e22e100df252
 
         <div id="inicial"> {/* ID para estilizar os parágrafos na página inicial */}
           <h1>SEU CORTE FALA POR VOCÊ ANTES MESMO DE VOCÊ DIZER UMA PALAVRA</h1>
@@ -103,12 +111,56 @@ function App() {
         
 
         <input type="button" value="Agendar serviço" onClick={() => HandleModal(1, true)} />
+<<<<<<< HEAD
+=======
+        
+          <Modal isOpen={isModal1Open} contentLabel="Agendar Serviço">
+            <h2>Agendar Serviço</h2>
+            <form>
+              <div>
+                <label>Nome:</label>
+                <input type="text" value={iptName} onChange={(e) => setIptName(e.target.value)}/>
+              </div>
+              <div>
+                <label>Data:</label>
+                <input type="date" min={FormattedToday()} value={iptDate} onChange={(e) => setIptDate(e.target.value)}/>
+              </div>
+              <div>
+                <label>Horário:</label>
+                <select value={inicialOption} onChange={(e) => setInicialOption(e.target.value)}>
+                  <option>Selecione um horário</option>
+                  <option disabled={DisableOption("08:00", iptDate)}>08:00</option>
+                  <option disabled={DisableOption("09:00", iptDate)}>09:00</option>
+                  <option disabled={DisableOption("10:00", iptDate)}>10:00</option>
+                  <option disabled={DisableOption("11:00", iptDate)}>11:00</option>
+                  <option disabled={DisableOption("12:00", iptDate)}>12:00</option>
+                  <option disabled={DisableOption("15:00", iptDate)}>15:00</option>
+                  <option disabled={DisableOption("16:00", iptDate)}>16:00</option>
+                  <option disabled={DisableOption("17:00", iptDate)}>17:00</option>
+                  <option disabled={DisableOption("18:00", iptDate)}>18:00</option>
+                  <option disabled={DisableOption("19:00", iptDate)}>19:00</option>
+                </select>
+              </div>
+              <button type="button" onClick={() => HandleModal(2, true)}>Confirmar</button>
+            </form>
+            <button onClick={() => HandleModal(1, false)}>Fechar</button>
+          </Modal>
+          <Modal isOpen={isModal2Open} contentLabel="Agendamento realizado!">
+            <h2>Agendamento realizado</h2>
+            <button type="button" onClick={() => HandleModal(2, false)}>Voltar</button>
+          </Modal>
+    
+>>>>>>> e000423c2180a436afd4efbabce4e22e100df252
 
         <Modal isOpen={isModal2Open} contentLabel="Agendamento realizado!">
           <h2>Agendamento realizado</h2>
           <button type="button" onClick={() => HandleModal(2, false)}>Voltar</button>
         </Modal>
+<<<<<<< HEAD
         </div> 
+=======
+
+>>>>>>> e000423c2180a436afd4efbabce4e22e100df252
       </section>
 
       <section id="sobre">
@@ -131,3 +183,7 @@ function App() {
 }
 
 export default App
+<<<<<<< HEAD
+=======
+
+>>>>>>> e000423c2180a436afd4efbabce4e22e100df252
