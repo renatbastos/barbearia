@@ -80,39 +80,19 @@ function App() {
       <header>
         <nav>
            <div class="container"> {/* classe para estilizar as tags superiores */}
-          <ul> 
-              <li class="sobre"><a href="#sobre">Sobre</a></li> 
-              <li class="servicos"><a href="#servicos">Serviços</a></li>
-          </ul>
-        </div>
+            <span class="sobre"><a href="#sobre">Sobre</a></span> 
+            <span class="servicos"><a href="#servicos">Serviços</a></span>
+          </div>
         </nav>
       </header>
-
-<<<<<<< HEAD
-        {/* <header>
-=======
-        <header>
->>>>>>> e000423c2180a436afd4efbabce4e22e100df252
-          <nav>
-            <ul>
-              <li><a href="#sobre">Sobre</a></li>
-              <li><a href="#servicos">Serviços</a></li>
-            </ul>
-          </nav>
-<<<<<<< HEAD
-        </header> */}
-=======
-        </header>
->>>>>>> e000423c2180a436afd4efbabce4e22e100df252
 
         <div id="inicial"> {/* ID para estilizar os parágrafos na página inicial */}
           <h1>SEU CORTE FALA POR VOCÊ ANTES MESMO DE VOCÊ DIZER UMA PALAVRA</h1>
           <h2>Horário de funcionamento: 08h às 19h</h2>
-        
-
-        <input type="button" value="Agendar serviço" onClick={() => HandleModal(1, true)} />
-<<<<<<< HEAD
-=======
+          <div>
+             <input type="button" value="Agendar serviço" onClick={() => HandleModal(1, true)} />
+          </div>
+        </div>
         
           <Modal isOpen={isModal1Open} contentLabel="Agendar Serviço">
             <h2>Agendar Serviço</h2>
@@ -150,40 +130,58 @@ function App() {
             <button type="button" onClick={() => HandleModal(2, false)}>Voltar</button>
           </Modal>
     
->>>>>>> e000423c2180a436afd4efbabce4e22e100df252
 
         <Modal isOpen={isModal2Open} contentLabel="Agendamento realizado!">
           <h2>Agendamento realizado</h2>
           <button type="button" onClick={() => HandleModal(2, false)}>Voltar</button>
         </Modal>
-<<<<<<< HEAD
-        </div> 
-=======
-
->>>>>>> e000423c2180a436afd4efbabce4e22e100df252
       </section>
 
       <section id="sobre">
         <div id="borda"> {/* ID para melhorar a tag sobre */}
           <div class="container-sobre">
-            <h1>Sobre</h1>
-            <p>No nosso estúdio, cada corte é mais do que estilo — é identidade. Trabalhamos para realçar a personalidade de cada cliente com técnica, atenção aos detalhes e um atendimento personalizado.</p>
+            <h1 class="titsec">Sobre</h1>
+            <p>No nosso estúdio, cada corte é mais do que estilo — é identidade. Trabalhamos para realçar a personalidade de cada cliente com técnica, atenção aos detalhes e um atendimento personalizado.</p><br></br>
             <p>Com profissionais experientes e um ambiente acolhedor, buscamos sempre superar expectativas e transformar sua visita em uma experiência única. Aqui, você não vem só cortar o cabelo — vem renovar a confiança.</p>
           </div>
         </div>
       </section>
 
       <section id="servicos">
-          <h1>Serviços</h1>
+          <h1 class="titsec">Serviços</h1>
           <p>Oferecemos cortes de cabelo e barba personalizados, com técnicas modernas e clássicas, garantindo um visual impecável e de qualidade.</p>
-        
+          
+      <div className="container1">
+        <div className="card">
+          <img
+            src="img/corte de cabelo-1200.jpg"
+            alt="imagem de um modelo de corte de cabelo"
+            style={{ width: "100%" }}
+          />
+          <div className="caixa">
+            <p>Corte de Cabelo</p>
+            <br />
+            <p>R$49,90</p>
+          </div>
+        </div>
+
+        <div className="card">
+          <img
+            src="img/homem fazendo barba.jpg"
+            alt="imagem de um homem fazendo barba"
+            style={{ width: "100%" }}
+          />
+          <div className="caixa">
+            <p>Cabelo e Barba</p>
+            <br />
+            <p>R$59,90</p>
+          </div>
+        </div>
+      </div>
       </section>
     </main>
   )
 }
 
 export default App
-<<<<<<< HEAD
-=======
 
->>>>>>> e000423c2180a436afd4efbabce4e22e100df252
