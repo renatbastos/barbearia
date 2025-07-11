@@ -334,4 +334,341 @@ section#sobre{
 .logo {
     background-color: black;
     height: 200px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: relative;
 }
+
+
+.logo-barber {
+    position: relative;
+   
+    transform: translateX(13%);
+}
+
+.logo-barber img{
+    display: flex;
+    max-width: 15%;
+    border-radius: 2px;
+    transform: translate(200%);
+    animation: brilho 2s infinite;
+}
+
+@keyframes brilho {
+    0%, 100% {
+        filter: brightness(1); /* brilho */
+        opacity: 1;  /* nivel de transparência */
+    }
+
+    50% {
+        filter: brightness(2);
+        opacity: 1;
+    }
+}
+
+ #agendamento {
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    margin: 0 auto;       
+}
+
+#agendamento h2 {
+    position: relative;
+    top: -20px;
+    margin-bottom: 20px; /* Empurra o elemento para baixo*/
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#agendar{
+    margin-top: 20px;
+    gap: 50px; /* espaçamento */
+}
+
+#agendamento form {
+    width: 100%;
+    max-width: 500px;
+    flex-direction: column;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.form-group {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    font-size: 25px;
+    line-height: 30px;
+    
+}
+
+.input-large {
+    width: 100%;
+    height: 42px;
+    padding: 2px;
+    box-sizing: border-box; /* Padding não deve ser maior que o width*/
+    font-size: 18px;
+}
+
+input::placeholder{
+    font-size: 18px;
+    color: #575555;
+    
+}
+
+input[type="text"], input[type="date"] {
+    font-size: 20px;
+    border-radius: 4px;
+}
+
+
+
+select option:first-child {
+  font-size: 20px;
+  font-style: italic;
+  color: #999;
+}
+#agendamento label {
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 200px;
+}
+
+#agendamento input[type="text"], #agendamento input[type="date"], #agendamento select {
+    border-radius: 7px;
+    color: rgb(0, 0, 0);
+    width: 100%;
+    max-width: 400px;
+    padding: 12px;
+    border-radius: 7px;
+    border: none;
+    color: #000;
+    background-color: #fff;
+    margin-bottom: 5px; 
+}
+
+#agendamento button[type="button"]  { /* botão confirmar */ 
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 15px;
+    padding: 10px 20px;
+    border-radius: 9px;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+} 
+
+ #agendamento button:not([type="button"]) {  /* botão fechar */  
+    background: transparent;
+    border: 1px solid white;
+    color: #ffffff;
+    padding: 8px;
+    margin-top: 8px; 
+ } 
+
+#agendamento button[type="button"]:hover {
+    transform: scale(1.2);
+}
+
+
+.modal-overlay { /* caixa de fundo do agendamento */
+  background-color: rgba(109, 104, 104, 0.281);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+
+.modal-content { /* caixa do agendamento */
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+  border-radius: 10px;
+  padding: 80px;
+  padding-top: 70px;
+  width: 600px;
+  height: auto;
+  max-width: 90vw; /* Largura Máxima */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; 
+ }  
+
+.modal-content h2{
+    font-size: 2rem;
+    margin-bottom: 80px;
+    font-weight: bold;
+}
+
+.button-confirm {
+    display: block;
+    padding: 10px 20px;
+    margin: 20px auto;
+    background-color: rgba(255, 166, 0, 0.712);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.4s ease;
+}
+
+.button-confirm:hover{
+    background-color: #444749;
+    transform: scale(1.05); /* Faz o botão "pulsar" */
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+}
+
+.button-fechar{
+    position: relative;
+    border:none;
+    background: transparent;
+    color: #ffffff;
+    top: -30px;
+    left: 250px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.modal-realizado{ /* caixa agendamento realizado */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    color: #ffffff;
+    font-weight: 800;
+    max-width: 90vw;
+    width: 40%;
+    height: 40%;
+    position: fixed;
+    padding: 40px;
+    border-radius: 10px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%); /* centralizar na página */
+}
+
+.modal-realizado button { /* button agendamento realizado */
+    background: #ffffff;
+    color: #000000;
+    font-size: 25px;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 159px;
+    background-color: rgba(255, 166, 0, 0.712);
+    color: rgb(255, 255, 255);
+    transition: background-color 0.3s ease;
+}
+
+.modal-realizado button:hover{
+     background-color: #444749;
+}
+
+.modal-realizado h2{ /* título h2 agendamento realizado */
+    /* width: 356px; */
+    /* height: 54px; */
+    /* top: -128px; */
+    font-weight: 800;
+    font-size: 40px;
+    margin-bottom: 40px;
+    margin-top: 120px;
+    cursor: pointer;
+}
+
+.modal-realizado button:hover {
+  transform: scale(1.05); /* Faz o botão "pulsar" */
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.6); /* Brilho */
+}
+
+.modal-logo { 
+
+}
+
+/* #agendamento {
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+#agendamento h2 {
+  margin-bottom: 30px;
+}
+
+#agendamento form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  gap: 30px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+}
+
+#agendamento label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+#agendamento input[type="text"],
+#agendamento input[type="date"],
+#agendamento select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 7px;
+  border: none;
+  background-color: #fff;
+  color: #000;
+}
+
+#agendamento button[type="button"] {
+  background-color: #fff;
+  color: #000;
+  font-size: 16px;
+  padding: 14px 28px;
+  border-radius: 9px;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#agendamento button[type="button"]:hover {
+  transform: scale(1.2);
+}
+
+#agendamento button:not([type="button"]) {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 10px;
+  margin-top: 20px;
+} */
