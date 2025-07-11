@@ -2,169 +2,38 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
+
 section {
     height: 700px;
     width: 1000px;
-}
+}    
 
-.caixa1{
-    display: flex;
-    gap: 20px; /* espaço entre as imagens */ 
-    justify-content: center;
-    align-items: left;
-    margin: 20px auto;
-    width: 100;
-    flex-direction: column;
-    display: flex;
-    margin-left: 45px;
-    margin-top: -50px;
-    position: relative;
-    top: -100px;
-}
-
-.texto{
-    /* text-align: center; */
-    font-weight: bold;
-    margin-left: 250px;
-    position: relative;
-    top: -408px;
-    /* border: 2px solid black; */
-    /* border-radius: 5px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); */
-    width: 20%;
-    margin-top: 15px; 
-    font-size: 18px;
-    white-space: nowrap;
-}
-
-.imagem-container {
-    display: flex;
-    gap: 10px; /* Espaço entre as imagens */
-}
-
-.imagem {
-    text-align: center; 
-}
-
-.imagem img{
-    width: 45%;
-    height: auto;
-    position: relative;
-    top: -400px;
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    height: auto;
-    text-align: center;
-    
-}             
-
-.barba img{
-    display: flex;
-    position: relative;
-    width:25%;
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    height: auto;
-    text-align: center;
-}
-
-.container{
+.menu{
     display: flex;
     gap: 20px;
     background-color: #000000;
     color: white;
-    justify-content: left;
     padding: 10px;
     width: 100vw;
-    box-sizing: border-box;
     font-weight: bold;
 }
 
-.sobre,.servicos{
-    width: auto;
-    height: auto;
-    /* box-sizing: border-box; */
-    list-style-type: none;
-}
-
-.sobre a, .servicos a{
+.spnmenu a{
     color: #ffffff;
     text-decoration: none;
-}
-
-/* #root {
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-} */
-
-
-/* header, nav {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-} */
-
-/* .sobre li, .servicos li{
-    padding: 10px;
-} */
-
-/* .agendamento{
-    text-align: center;
-    background-color: black;
-    color: white;
-    padding: 10px;
-    border-radius: 10px;
-    margin: auto;
-    width: 50%;
-}
-
-.agendamento h2{
-    margin-bottom: 10px;
-}
-
-.agendamento form div{
-    margin-bottom: 10px;
-}
-
-.agendamento input, .agendamento select{
-    background-color: black;
-    color: white;
-    padding: 10px;
-    border-radius: 8px;
-}
-
-.agendamento button{
-    background-color: white;
-    color: black;
-    border-radius: 8px;
-    padding: 10px;
-    cursor: pointer;
-} */
-html,body{
-    height: 100%;
-    width: 100%;
-    padding: 0;
-    margin: 0;
 }
 
 #inicial{
     display: flex;
     justify-content: center;
     text-align: center;
-    align-items: center;
     flex-direction: column;
-    height: 100vh; /*define 100% da altura*/
-    width: 100vw; /*define 100% da largura*/
-    box-sizing: border-box;
-    margin: 0;
+    height: 100vh;
+    width: 100vw; 
     color: white;
     font-size: 2rem;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
-    /* border: 1px solid black; */
 }
 
 h2 {
@@ -173,7 +42,6 @@ h2 {
 }
 
 input[type="button"] {
-    display: block;
     margin: 100px auto;
     padding: 10px;
     border-radius: 5px;
@@ -183,31 +51,15 @@ input[type="button"] {
     background-color: gray;
     color: black;
     font-weight: bold;
-    z-index: 1;
-    
-
 }
 
-/* input[type="button"] {
-    display: block;
-    padding: 10px 10px;
-    margin: 100px auto;
-    border-radius: 8px;
-
-} */
-
-div.card {
+.card {
   width: 30%;
   background-color: rgb(255, 255, 255);
   box-shadow: 0 4px 8px 0 rgb(29, 28, 28), 0 6px 20px 0 rgba(0, 0, 0, 0.425);
-  margin-bottom: 25px;
-  /* position:relative; */
-  top: 100px;
-  font-size: 18px;
-  
 }
 
-div.caixa {
+.textcard {
   text-align: center;
   padding: 5px 5px;
   background-color: #ffffff;
@@ -218,9 +70,6 @@ div.caixa {
 .barbearia{
     position: absolute;
     background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1)), url('/public/img/barbearia-1200.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: local;
     width: 100%;
     height: 820px;
     top: 0;
@@ -230,40 +79,22 @@ div.caixa {
 }
 
 #sobre{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    text-align: justify;
-    font-size: 22px;
-}
-
-#borda{
-    /* padding: 50px; */
     padding: 100px;
-    text-align: center;
-    justify-content: center;
-    width: 100%;
-    /* background-color: #8d8989; */
     background-color: black;
     color: white;
-    /* border: 1px solid black; */
-    width: 100vw;
-    right: 0;
-    left: 0;
+    width: 100%;
 }
-section#sobre{
-    overflow: hidden;
-    margin: 0;
-}
+
 .container-sobre{
-    justify-content: center;
     text-align: justify;
     font-size: 1.2rem;
     align-items: center;
     flex-direction: column;
-    width: 100%;
     display: flex;
+}
+
+.titsec {
+    font-size: 2rem;
 }
 
 #servicos{
@@ -273,12 +104,13 @@ section#sobre{
     background-color: white;
     color: black;
     margin-top: -300px;
+    height: 600px;
 }
 
-.container1{
+.containercards{
     display: flex;
     justify-content: center;
-    gap: 80px; /* espaçamento entre as imagens */
+    gap: 80px; 
     transform: translateY(100px);
     perspective: 800px;
 }
@@ -286,7 +118,6 @@ section#sobre{
 .card{
     padding: 8px;
     border-radius: 5px;
-    /* transform: translateY(-650px); */
 }
 
 .card:hover{
@@ -295,108 +126,30 @@ section#sobre{
     transform: translateZ(70px);
 } 
 
-.titsec {
-    font-size: 2rem;
-}
-
-/* .imgsobre{
-    padding: 15px;
-    padding-bottom: 0px;
-    position: absolute;
-    top: 820px;
-    width: 40%;
-    width: 50%;
-    height: 65%;
-    background-image: linear-gradient(rgb(128, 128, 128),rgba(0, 0, 0, 0.925));
-} */
-.img1 img{
-    width: 24%;
-    height: auto;
-    transform: translate(70%, 0%); /*MOVE A IMAGEM PARA CIMA E PARA A DIREITA*/
-    border-radius: 5px;
-}
-
-.img2 img{
-    width: 22%;
-    height: auto;
-    border-radius: 5px;
-    transform: translate(172%, -18%); 
-    
-}
-
-.img3 img{
-    border-radius: 5px;
-    width: 45%;
-    transform: translate(94%, -214%); 
-    height: auto;
-}
-
-.logo {
+.divlogo {
     background-color: black;
-    height: 200px;
+    height: 140px;
     justify-content: center;
     align-items: center;
     display: flex;
-    position: relative;
-}
-
-
-.logo-barber {
-    position: relative;
-   
-    transform: translateX(13%);
+    text-align: center;
 }
 
 .logo-barber img{
-    display: flex;
-    max-width: 15%;
+    max-width: 30%;
     border-radius: 2px;
-    transform: translate(200%);
-    animation: brilho 2s infinite;
 }
 
-@keyframes brilho {
+@keyframes brilho  {
     0%, 100% {
-        filter: brightness(1); /* brilho */
-        opacity: 1;  /* nivel de transparência */
+        filter: brightness(1); 
+        opacity: 1;  
     }
 
     50% {
         filter: brightness(2);
         opacity: 1;
     }
-}
-
- #agendamento {
-    text-align: center;
-    width: 100%;
-    max-width: 500px;
-    padding: 10px;
-    margin: 0 auto;       
-}
-
-#agendamento h2 {
-    position: relative;
-    top: -20px;
-    margin-bottom: 20px; /* Empurra o elemento para baixo*/
-    font-size: 28px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-#agendar{
-    margin-top: 20px;
-    gap: 50px; /* espaçamento */
-}
-
-#agendamento form {
-    width: 100%;
-    max-width: 500px;
-    flex-direction: column;
-    display: flex;
-    gap: 30px;
-    align-items: center;
 }
 
 .form-group {
@@ -419,7 +172,7 @@ section#sobre{
     width: 100%;
     height: 42px;
     padding: 2px;
-    box-sizing: border-box; /* Padding não deve ser maior que o width*/
+    box-sizing: border-box; 
     font-size: 18px;
 }
 
@@ -433,8 +186,6 @@ input[type="text"], input[type="date"] {
     font-size: 20px;
     border-radius: 4px;
 }
-
-
 
 select option:first-child {
   font-size: 20px;
@@ -462,7 +213,7 @@ select option:first-child {
     margin-bottom: 5px; 
 }
 
-#agendamento button[type="button"]  { /* botão confirmar */ 
+#agendamento button[type="button"]  {
     background-color: #ffffff;
     color: #000000;
     font-size: 15px;
@@ -472,7 +223,7 @@ select option:first-child {
     cursor: pointer;
 } 
 
- #agendamento button:not([type="button"]) {  /* botão fechar */  
+ #agendamento button:not([type="button"]) {  
     background: transparent;
     border: 1px solid white;
     color: #ffffff;
@@ -485,7 +236,7 @@ select option:first-child {
 }
 
 
-.modal-overlay { /* caixa de fundo do agendamento */
+.modal-overlay { 
   background-color: rgba(109, 104, 104, 0.281);
   position: fixed;
   top: 0;
@@ -533,7 +284,7 @@ select option:first-child {
 .button-confirm:hover{
     background-color: #444749;
     transform: scale(1.05); /* Faz o botão "pulsar" */
-    box-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
 }
 
 .button-fechar{
@@ -555,7 +306,7 @@ select option:first-child {
     align-items: center;
     background-color: #000000;
     color: #ffffff;
-    font-weight: 800;
+    font-weight: normal;
     max-width: 90vw;
     width: 40%;
     height: 40%;
@@ -583,92 +334,181 @@ select option:first-child {
 
 .modal-realizado button:hover{
      background-color: #444749;
+     transform: scale(1.05); /* Faz o botão "pulsar" */
+     box-shadow: 0 0 5px rgba(255, 255, 255, 0.6); /* Brilho */
 }
 
 .modal-realizado h2{ /* título h2 agendamento realizado */
-    /* width: 356px; */
-    /* height: 54px; */
-    /* top: -128px; */
-    font-weight: 800;
-    font-size: 40px;
+    font-weight: bold;
+    font-size: 1.8rem;
     margin-bottom: 40px;
     margin-top: 120px;
     cursor: pointer;
-}
-
-.modal-realizado button:hover {
-  transform: scale(1.05); /* Faz o botão "pulsar" */
-  box-shadow: 0 0 12px rgba(255, 255, 255, 0.6); /* Brilho */
 }
 
 .modal-logo { 
 
 }
 
-/* #agendamento {
-  text-align: center;
-  width: 100%;
-  max-width: 600px;
-  padding: 20px;
-  margin: 0 auto;
+@media (max-width: 480px) {
+  section {
+    width: 100%;
+    height: auto;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 10px;
+    font-size: 14px;
+  }
+
+  #inicial {
+    font-size: 1.2rem;
+    padding: 20px;
+  }
+
+  .card {
+    width: 90%;
+    margin-left: 20px;
+  }
+
+  .containercards {
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px;
+    transform: none;
+  }
+
+  .logo-barber img {
+    max-width: 40%;
+  }
+
+  .modal-content {
+    width: 95%;
+    padding: 30px 15px;
+  }
+
+  .button-fechar {
+    top: -20px;
+    left: auto;
+    right: 10px;
+    font-size: 24px;
+  }
+
+  #servicos {
+    margin-top: 0;
+    height: auto;
+    padding: 20px 10px;
+  }
+
+  #sobre {
+    margin-top: -180px;
+    padding: 30px 10px;
+  }
+
+  .container-sobre {
+    font-size: 1rem;
+  }
+
+  .form-group, #agendamento input, #agendamento select {
+    width: 100%;
+  }
+
+  .modal-realizado {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .modal-realizado h2 {
+    font-size: 1.4rem;
+    margin-top: 40px;
+  }
+
+  .modal-realizado button {
+    font-size: 18px;
+  }
 }
 
-#agendamento h2 {
-  margin-bottom: 30px;
+@media (min-width: 481px) and (max-width: 767px) {
+  section {
+    width: 100%;
+    height: auto;
+  }
+
+  .menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  #inicial {
+    font-size: 1.6rem;
+    padding: 30px;
+  }
+
+  .card {
+    width: 45%;
+  }
+
+  .containercards {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    transform: none;
+    padding: 10px;
+  }
+
+  .logo-barber img {
+    max-width: 40%;
+  }
+
+  .modal-content {
+    width: 90%;
+    padding: 40px 20px;
+  }
+
+  .button-fechar {
+    top: -25px;
+    left: auto;
+    right: 20px;
+    font-size: 26px;
+  }
+
+  #servicos {
+    margin-top: 0;
+    height: auto;
+    padding: 30px 15px;
+  }
+
+  #sobre {
+    padding: 50px 20px;
+  }
+
+  .container-sobre {
+    font-size: 1.1rem;
+  }
+
+  .form-group, #agendamento input, #agendamento select {
+    width: 100%;
+  }
+
+  .modal-realizado {
+    width: 85%;
+    height: auto;
+    padding: 30px;
+  }
+
+  .modal-realizado h2 {
+    font-size: 1.6rem;
+    margin-top: 60px;
+  }
+
+  .modal-realizado button {
+    font-size: 20px;
+  }
 }
 
-#agendamento form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  max-width: 500px;
-  gap: 30px;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 400px;
-}
-
-#agendamento label {
-  font-weight: bold;
-  margin-bottom: 8px;
-  text-align: left;
-}
-
-#agendamento input[type="text"],
-#agendamento input[type="date"],
-#agendamento select {
-  width: 100%;
-  padding: 12px;
-  border-radius: 7px;
-  border: none;
-  background-color: #fff;
-  color: #000;
-}
-
-#agendamento button[type="button"] {
-  background-color: #fff;
-  color: #000;
-  font-size: 16px;
-  padding: 14px 28px;
-  border-radius: 9px;
-  transition: transform 0.2s ease;
-  cursor: pointer;
-  margin-top: 10px;
-}
-
-#agendamento button[type="button"]:hover {
-  transform: scale(1.2);
-}
-
-#agendamento button:not([type="button"]) {
-  background: transparent;
-  border: 1px solid #fff;
-  color: #fff;
-  padding: 10px;
-  margin-top: 20px;
-} */

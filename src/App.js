@@ -77,12 +77,10 @@ function App() {
     <main>
       <section>
       <header>
-        <nav>
-           <div class="container"> {/* classe para estilizar as tags superiores */}
-            <span class="sobre"><a href="#sobre">Sobre</a></span> 
-            <span class="servicos"><a href="#servicos">Serviços</a></span>
-          </div>
-        </nav>
+           <nav class="menu"> {/* classe para estilizar as tags superiores */}
+            <span class="spnmenu"><a href="#sobre">Sobre</a></span> 
+            <span class="spnmenu"><a href="#servicos">Serviços</a></span>
+          </nav>
       </header>
 
         <div id="inicial"> {/* ID para estilizar os parágrafos na página inicial */}
@@ -93,7 +91,7 @@ function App() {
           </div>
         </div>
         
-           <div id="agendamento"> {/*modal alterado: Adicionado ClassName, overlayClassName */}
+           <div> {/*modal alterado: Adicionado ClassName, overlayClassName */}
             <Modal isOpen={isModal1Open} contentLabel="Agendar Serviço" className="modal-content" overlayClassName="modal-overlay">
               <button onClick={() => HandleModal(1, false)} className="button-fechar">X</button>
               <h2 id="agendar">Agendar Serviço</h2>
@@ -130,45 +128,35 @@ function App() {
                 </div>
                 <button className="button-confirm" type="button" onClick={() => HandleModal(2, true)}>Confirmar</button>
               </form>
-              {/* <button onClick={() => HandleModal(1, false)} className="button-fechar">X</button> */}
             </Modal>
           </div>
 
           <Modal isOpen={isModal2Open} contentLabel="Agendamento realizado!" className="modal-realizado">
-            <h2>Agendamento realizado!</h2>
-            {/* <div className='modal-logo'><img src='barbearia/barbearia/public/img/logo-barbearia.png' alt='Logo da barbearia' className='logo-img'></img></div> */}
+            <h2 id="fontmodreal">Agendamento realizado!</h2>
             <button type="button" onClick={() => HandleModal(2, false)}>Voltar</button>
           </Modal>
-    
-
-        {/* <Modal isOpen={isModal2Open} contentLabel="Agendamento realizado!">
-          <h2>Agendamento realizado</h2>
-          <button type="button" onClick={() => HandleModal(2, false)}>Voltar</button>
-        </Modal> */}
       </section>
 
       <section id="sobre">
-        <div id="borda"> {/* ID para melhorar a tag sobre */}
           <div class="container-sobre">
             <h1 class="titsec">Sobre</h1>
             <p>No nosso estúdio, cada corte é mais do que estilo — é identidade. Trabalhamos para realçar a personalidade de cada cliente com técnica, atenção aos detalhes e um atendimento personalizado.</p><br></br>
             <p>Com profissionais experientes e um ambiente acolhedor, buscamos sempre superar expectativas e transformar sua visita em uma experiência única. Aqui, você não vem só cortar o cabelo — vem renovar a confiança.</p>
           </div>
-        </div>
       </section>
 
       <section id="servicos">
           <h1 class="titsec">Serviços</h1>
           <p>Oferecemos cortes de cabelo e barba personalizados, com técnicas modernas e clássicas, garantindo um visual impecável e de qualidade.</p>
           
-      <div className="container1">
+      <div className="containercards">
         <div className="card">
           <img
             src="img/corte de cabelo-1200.jpg"
             alt="imagem de um modelo de corte de cabelo"
             style={{ width: "100%" }}
           />
-          <div className="caixa">
+          <div className="textcard">
             <p>Corte de Cabelo</p>
             <br />
             <p>R$49,90</p>
@@ -181,7 +169,7 @@ function App() {
             alt="imagem de um homem fazendo barba"
             style={{ width: "100%" }}
           />
-          <div className="caixa">
+          <div className="textcard">
             <p>Cabelo e Barba</p>
             <br />
             <p>R$59,90</p>
