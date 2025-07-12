@@ -87,7 +87,7 @@ function App() {
           <h1>SEU CORTE FALA POR VOCÊ ANTES MESMO DE VOCÊ DIZER UMA PALAVRA</h1>
           <h2>Horário de funcionamento: 08h às 19h</h2>
           <div>
-             <input type="button" value="Agendar serviço" onClick={() => HandleModal(1, true)} />
+             <input type="button" value="Agendar Serviço" onClick={() => HandleModal(1, true)} />
           </div>
         </div>
         
@@ -104,8 +104,8 @@ function App() {
                 </div>
                 <div>
                 <div className="form-group">
-                  <label>Data:</label>
-                  <input className="input-large" type="date" min={FormattedToday()} placeholder="Selecione a data" value={iptDate} onChange={(e) => setIptDate(e.target.value)}/>
+                  <label htmlFor="data">Selecione a Data:</label>
+                  <input id="data" className="input-large" type="date" min={FormattedToday()} placeholder="Selecione a data" value={iptDate} onChange={(e) => setIptDate(e.target.value)}/>
                 </div>
                 </div>
                 <div>
@@ -131,7 +131,13 @@ function App() {
             </Modal>
           </div>
 
-          <Modal isOpen={isModal2Open} contentLabel="Agendamento realizado!" className="modal-realizado">
+          <Modal isOpen={isModal2Open} contentLabel="Agendamento realizado!" className="modal-realizado" overlayClassName="modal-overlay">
+            {/* Imagem da logo */}
+            <div className='modal-logo'>
+              <img 
+                src="img/logo-barbearia-removebg-preview.png" alt='Imagem da Logo'
+              />
+            </div>
             <h2 id="fontmodreal">Agendamento realizado!</h2>
             <button type="button" onClick={() => HandleModal(2, false)}>Voltar</button>
           </Modal>

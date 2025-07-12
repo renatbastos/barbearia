@@ -44,13 +44,29 @@ h2 {
 input[type="button"] {
     margin: 100px auto;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 2px;
     cursor: pointer;
     width: 200px;
     font-size: 15px;
-    background-color: gray;
-    color: black;
+    background-color: #808080;
+    color: #000000;
     font-weight: bold;
+    transition: all 0.3s ease;
+    animation: pulse 1.4s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 .card {
@@ -140,7 +156,7 @@ input[type="button"] {
     border-radius: 2px;
 }
 
-@keyframes brilho  {
+/* @keyframes brilho  {
     0%, 100% {
         filter: brightness(1); 
         opacity: 1;  
@@ -150,7 +166,7 @@ input[type="button"] {
         filter: brightness(2);
         opacity: 1;
     }
-}
+} */
 
 .form-group {
     display: flex;
@@ -235,7 +251,6 @@ select option:first-child {
     transform: scale(1.2);
 }
 
-
 .modal-overlay { 
   background-color: rgba(109, 104, 104, 0.281);
   position: fixed;
@@ -261,6 +276,7 @@ select option:first-child {
   justify-content: center;
   align-items: center;
   flex-direction: column; 
+  position: relative;
  }  
 
 .modal-content h2{
@@ -288,14 +304,16 @@ select option:first-child {
 }
 
 .button-fechar{
-    position: relative;
+    position: absolute;
     border:none;
     background: transparent;
     color: #ffffff;
-    top: -30px;
-    left: 250px;
+    top: 20px;
+    right: 0px;
+    left: 820px;
     font-size: 30px;
     cursor: pointer;
+    z-index: 10;
 }
 
 .modal-realizado{ /* caixa agendamento realizado */
@@ -309,13 +327,14 @@ select option:first-child {
     font-weight: normal;
     max-width: 90vw;
     width: 40%;
-    height: 40%;
+    height: auto;
     position: fixed;
     padding: 40px;
     border-radius: 10px;
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%); /* centralizar na página */
+    overflow: hidden; 
 }
 
 .modal-realizado button { /* button agendamento realizado */
@@ -341,14 +360,28 @@ select option:first-child {
 .modal-realizado h2{ /* título h2 agendamento realizado */
     font-weight: bold;
     font-size: 1.8rem;
-    margin-bottom: 40px;
-    margin-top: 120px;
+    margin: 20px 0 40px 0;
+    text-align: center;
     cursor: pointer;
 }
 
 .modal-logo { 
-
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
+
+.modal-logo img {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
+  height: auto;
+}
+
 
 @media (max-width: 480px) {
   section {
@@ -422,11 +455,15 @@ select option:first-child {
 
   .modal-realizado h2 {
     font-size: 1.4rem;
-    margin-top: 40px;
+    margin-top: 20px;
   }
 
   .modal-realizado button {
     font-size: 18px;
+  }
+
+  .modal-logo img {
+    max-width: 60%;
   }
 }
 
@@ -471,12 +508,12 @@ select option:first-child {
     padding: 40px 20px;
   }
 
-  .button-fechar {
-    top: -25px;
+   .button-fechar {
+    top: 25px;
     left: auto;
     right: 20px;
     font-size: 26px;
-  }
+  } 
 
   #servicos {
     margin-top: 0;
@@ -512,3 +549,120 @@ select option:first-child {
   }
 }
 
+
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .menu {
+    font-size: 16px;
+    gap: 20px;
+    padding: 15px;
+  }
+
+  .card {
+    width: 40%;
+  }
+
+  .containercards {
+    gap: 40px;
+    padding: 30px;
+  }
+
+  #inicial {
+    font-size: 2rem;
+    padding: 40px;
+  }
+
+  .modal-content {
+    width: 80%;
+    padding: 50px 25px;
+  }
+
+  .button-fechar {
+    top: 25px;
+    left: auto;
+    right: 20px;
+    font-size: 26px;
+  }   
+
+  .modal-realizado h2 {
+    font-size: 1.8rem;
+  }
+
+  .modal-realizado button {
+    font-size: 22px;
+  }
+}
+
+/* Notebooks */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .menu {
+    font-size: 17px;
+    gap: 25px;
+  }
+
+  .card {
+    width: 30%;
+  }
+
+  .containercards {
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  #inicial {
+    font-size: 2.4rem;
+    padding: 60px;
+  }
+
+  .modal-content {
+    width: 70%;
+  }
+
+  .button-fechar {
+    top: 25px;
+    left: auto;
+    right: 20px;
+    font-size: 26px;
+  }  
+
+  .modal-realizado h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Monitores grandes */
+@media (min-width: 1441px) {
+  .menu {
+    font-size: 18px;
+    gap: 30px;
+    padding: 20px;
+  }
+
+  .card {
+    width: 22%;
+  }
+
+  .containercards {
+    gap: 50px;
+    padding: 60px;
+  }
+
+  #inicial {
+    font-size: 3rem;
+    padding: 80px;
+  }
+
+  .modal-content {
+    width: 60%;
+    padding: 60px 40px;
+  }
+
+  .modal-realizado h2 {
+    font-size: 2.4rem;
+  }
+
+  .modal-realizado button {
+    font-size: 24px;
+  }
+}
