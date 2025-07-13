@@ -77,18 +77,18 @@ function App() {
     <main>
       <section>
       <header>
-           <nav class="menu"> {/* classe para estilizar as tags superiores */}
-            <span class="spnmenu"><a href="#sobre">Sobre</a></span> 
-            <span class="spnmenu"><a href="#servicos">Serviços</a></span>
+           <nav className="menu"> {/* classe para estilizar as tags superiores */}
+            <span className="spnmenu"><a href="#sobre">Sobre</a></span> 
+            <span className="spnmenu"><a href="#servicos">Serviços</a></span>
           </nav>
       </header>
 
-        <div id="inicial"> {/* ID para estilizar os parágrafos na página inicial */}
-          <h1>SEU CORTE FALA POR VOCÊ ANTES MESMO DE VOCÊ DIZER UMA PALAVRA</h1>
-          <h2>Horário de funcionamento: 08h às 19h</h2>
-          <div>
-             <input type="button" value="Agendar Serviço" onClick={() => HandleModal(1, true)} />
-          </div>
+          <div id="inicial"> {/* ID para estilizar os parágrafos na página inicial */}
+            <h1>SEU CORTE FALA POR VOCÊ ANTES MESMO DE VOCÊ DIZER UMA PALAVRA</h1>
+            <h2>Horário de funcionamento: 08h às 19h</h2>
+            <div>
+               <input type="button" value="Agendar Serviço" onClick={() => HandleModal(1, true)} />
+            </div>
         </div>
         
            <div> {/*modal alterado: Adicionado ClassName, overlayClassName */}
@@ -104,7 +104,7 @@ function App() {
                 </div>
                 <div>
                 <div className="form-group">
-                  <label htmlFor="data">Selecione a Data:</label>
+                  <label htmlFor="data">Selecione a data:</label>
                   <input id="data" className="input-large" type="date" min={FormattedToday()} placeholder="Selecione a data" value={iptDate} onChange={(e) => setIptDate(e.target.value)}/>
                 </div>
                 </div>
@@ -144,15 +144,15 @@ function App() {
       </section>
 
       <section id="sobre">
-          <div class="container-sobre">
-            <h1 class="titsec">Sobre</h1>
+          <div className="container-sobre">
+            <h1 className="titsec">Sobre</h1>
             <p>No nosso estúdio, cada corte é mais do que estilo — é identidade. Trabalhamos para realçar a personalidade de cada cliente com técnica, atenção aos detalhes e um atendimento personalizado.</p><br></br>
             <p>Com profissionais experientes e um ambiente acolhedor, buscamos sempre superar expectativas e transformar sua visita em uma experiência única. Aqui, você não vem só cortar o cabelo — vem renovar a confiança.</p>
           </div>
       </section>
 
       <section id="servicos">
-          <h1 class="titsec">Serviços</h1>
+          <h1 className="titsec">Serviços</h1>
           <p>Oferecemos cortes de cabelo e barba personalizados, com técnicas modernas e clássicas, garantindo um visual impecável e de qualidade.</p>
           
       <div className="containercards">

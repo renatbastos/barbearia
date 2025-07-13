@@ -156,18 +156,6 @@ input[type="button"] {
     border-radius: 2px;
 }
 
-/* @keyframes brilho  {
-    0%, 100% {
-        filter: brightness(1); 
-        opacity: 1;  
-    }
-
-    50% {
-        filter: brightness(2);
-        opacity: 1;
-    }
-} */
-
 .form-group {
     display: flex;
     align-items: flex-start;
@@ -263,7 +251,7 @@ select option:first-child {
   align-items: center;
 } 
 
-.modal-content { /* caixa do agendamento */
+.modal-content { 
   background-color: rgb(0, 0, 0);
   color: #fff;
   border-radius: 10px;
@@ -271,7 +259,7 @@ select option:first-child {
   padding-top: 70px;
   width: 600px;
   height: auto;
-  max-width: 90vw; /* Largura Máxima */
+  max-width: 90vw; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -299,7 +287,7 @@ select option:first-child {
 
 .button-confirm:hover{
     background-color: #444749;
-    transform: scale(1.05); /* Faz o botão "pulsar" */
+    transform: scale(1.05); 
     box-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
 }
 
@@ -316,7 +304,7 @@ select option:first-child {
     z-index: 10;
 }
 
-.modal-realizado{ /* caixa agendamento realizado */
+.modal-realizado{ 
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -333,11 +321,11 @@ select option:first-child {
     border-radius: 10px;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%); /* centralizar na página */
+    transform: translate(-50%,-50%); 
     overflow: hidden; 
 }
 
-.modal-realizado button { /* button agendamento realizado */
+.modal-realizado button { 
     background: #ffffff;
     color: #000000;
     font-size: 25px;
@@ -353,11 +341,11 @@ select option:first-child {
 
 .modal-realizado button:hover{
      background-color: #444749;
-     transform: scale(1.05); /* Faz o botão "pulsar" */
-     box-shadow: 0 0 5px rgba(255, 255, 255, 0.6); /* Brilho */
+     transform: scale(1.05); 
+     box-shadow: 0 0 5px rgba(255, 255, 255, 0.6); 
 }
 
-.modal-realizado h2{ /* título h2 agendamento realizado */
+.modal-realizado h2{ 
     font-weight: bold;
     font-size: 1.8rem;
     margin: 20px 0 40px 0;
@@ -382,7 +370,7 @@ select option:first-child {
   height: auto;
 }
 
-
+/* Celulares pequenos */
 @media (max-width: 480px) {
   section {
     width: 100%;
@@ -467,6 +455,7 @@ select option:first-child {
   }
 }
 
+/* Celulares grandes */
 @media (min-width: 481px) and (max-width: 767px) {
   section {
     width: 100%;
@@ -549,94 +538,26 @@ select option:first-child {
   }
 }
 
-
-
-/* Tablets */
-@media (min-width: 768px) and (max-width: 1024px) {
-  .menu {
-    font-size: 16px;
-    gap: 20px;
-    padding: 15px;
-  }
-
-  .card {
-    width: 40%;
-  }
-
-  .containercards {
-    gap: 40px;
-    padding: 30px;
-  }
-
-  #inicial {
-    font-size: 2rem;
-    padding: 40px;
-  }
-
-  .modal-content {
-    width: 80%;
-    padding: 50px 25px;
-  }
-
-  .button-fechar {
-    top: 25px;
-    left: auto;
-    right: 20px;
-    font-size: 26px;
-  }   
-
-  .modal-realizado h2 {
-    font-size: 1.8rem;
-  }
-
-  .modal-realizado button {
-    font-size: 22px;
-  }
-}
-
-/* Notebooks */
-@media (min-width: 1025px) and (max-width: 1440px) {
-  .menu {
-    font-size: 17px;
-    gap: 25px;
-  }
-
-  .card {
-    width: 30%;
-  }
-
-  .containercards {
-    justify-content: space-between;
-    gap: 30px;
-  }
-
-  #inicial {
-    font-size: 2.4rem;
-    padding: 60px;
-  }
-
-  .modal-content {
-    width: 70%;
-  }
-
-  .button-fechar {
-    top: 25px;
-    left: auto;
-    right: 20px;
-    font-size: 26px;
-  }  
-
-  .modal-realizado h2 {
-    font-size: 2rem;
-  }
-}
-
 /* Monitores grandes */
-@media (min-width: 1441px) {
+@media (min-width: 1201px) {
+  section {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    height: auto;
+  }
+
   .menu {
-    font-size: 18px;
+    flex-direction: row;
+    justify-content: center;
     gap: 30px;
-    padding: 20px;
+    font-size: 18px;
+    padding: 20px 40px;
+  }
+
+  #inicial {
+    font-size: 2.5rem;
+    padding: 60px 80px;
   }
 
   .card {
@@ -644,25 +565,60 @@ select option:first-child {
   }
 
   .containercards {
+    display: flex;
+    justify-content: center;
     gap: 50px;
-    padding: 60px;
+    padding: 40px;
+    flex-wrap: wrap;
   }
 
-  #inicial {
-    font-size: 3rem;
-    padding: 80px;
+  .logo-barber img {
+    max-width: 20%;
   }
 
   .modal-content {
-    width: 60%;
+    width: 50%;
     padding: 60px 40px;
   }
 
+  .button-fechar {
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+  }
+
+  #servicos {
+    margin-top: 0;
+    padding: 60px 60px;
+  }
+
+  #sobre {
+    padding: 80px 60px;
+    margin-top: -50px;
+  }
+
+  .container-sobre {
+    font-size: 1.3rem;
+    line-height: 1.6;
+  }
+
+  .form-group, #agendamento input, #agendamento select {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .modal-realizado {
+    width: 50%;
+    padding: 50px;
+  }
+
   .modal-realizado h2 {
-    font-size: 2.4rem;
+    font-size: 2rem;
+    margin-top: 60px;
   }
 
   .modal-realizado button {
-    font-size: 24px;
+    font-size: 22px;
   }
 }
+
